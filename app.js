@@ -4,6 +4,22 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+// -- Set up MongoDB Database --
+var mongoose = require('mongoose')
+const DATABASE_URL = 'mongodb+srv://admin:gamerslairadmin@gamerslaircluster.fewpe.mongodb.net/GamersLairClusster?retryWrites=true&w=majority'
+mongoose.connect(process.env.DATABASE_URL, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+.then(
+  console.log('MongoDB Conected')
+)
+.catch(err => console.log(err))
+
+const MongoStore = require('connect-mongo')
+
+// -- End of MongoDB Database Setup -- 
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
