@@ -40,3 +40,39 @@ exports.postRegister = function(req, res, next){
             }            
         })
 }
+
+exports.getLogin = function(req, res, next){
+    return res.render('login', {title: 'Login'})
+}
+
+exports.postLogin = function(req, res, next){
+    return res.status(200)
+              .json({
+                  success: true,
+                  message: 'Successful login'
+              })
+}
+
+exports.getForgotPassword = function(req, res, next){
+    return res.render('forgotPassword', {title: 'Forgot Password'})
+}
+
+exports.postForgotPassword = function(req, res, next){
+    return res.status(200)
+              .json({
+                  success: true, 
+                  message: 'Successfully Sent Reset Password Email'
+              })
+}
+
+exports.getResetPassword = function(req, res, next){
+    return res.render('resetPassword', {title: "Reset Password", token: 'asdfasdfa'})
+}
+
+exports.postResetPassword = function(req, res, next){
+    return res.status(200)
+              .json({
+                  success: true, 
+                  message: "Successfully reset password"
+              })
+}
