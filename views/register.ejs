@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <!-- <link rel='stylesheet' href='/stylesheets/style.css' /> -->
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <form id = "registerForm" METHOD = "POST" action ="/register">
+        <input type = "text" name ="email" id = "inputEmail" placeholder = "Email Address" required />
+        <input type = "text" name= "name" id = "inputFirstName" placeholder="First Name" required />
+        <input type = "text" name = "lastName" id = "inputLastName" placeholder = "Last Name" required />
+        <input type = "phoneNumber" name= "phoneNumber" id = "inputPhoneNumber" placeholder = "Phone Number" required />
+        <input type = "text" name = "xboxId" id = "inputXboxId" placeholder = "Xbox ID" required />
+        <input type = "text" name = "playstationId" id = "inputPlaystationId" placeholder = "Playstation ID" required />
+        <input type= "password" name = "password" id = "inputPassword" placeholder = "Password" required/>
+        <input type = "password" name = "confirmPassword" id = "inputConfirmPassword" placeholder = "Confirm Password" required />
+        <input type = "submit"/>
+    </form>
+  </body>
+  <script src = "/javascripts/auth/register.js"></script>
+</html>
