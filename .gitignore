@@ -105,3 +105,6 @@ dist
 
 # remove my word file showing my functionalities 
 *.docx
+
+# remove any pem file 
+*.pem

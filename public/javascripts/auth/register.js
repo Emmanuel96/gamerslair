@@ -27,9 +27,25 @@ function registerUser(event){
     }).then(response => response.json())
       .then(data =>{
             if(data.success != true){
-                alert('Auth failed')
+                swal.fire({
+                    text: data.message,
+                    icon: "error",
+                    buttonsStyling: false,
+                    confirmButtonText: "Ok, got it!",
+                    customClass: {
+                        confirmButton: "btn font-weight-bold btn-primary"
+                    }
+                });
             }else{
-                alert('Registration successful')
+                swal.fire({
+                    text: data.message,
+                    icon: "success",
+                    buttonsStyling: false,
+                    confirmButtonText: "Ok, got it!",
+                    customClass: {
+                        confirmButton: "btn font-weight-bold btn-primary"
+                    }
+                });
             }
       })
 }
