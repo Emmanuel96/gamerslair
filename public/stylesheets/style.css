@@ -1,6 +1,17 @@
+
 body {
+  background-color: #f4f4f7;
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  height: 100%; 
+  width: 100%; 
+}
+.container-div{
+  height: 100%;
+}
+
+.white-background{
+  background-color: white;
 }
 
 a {
